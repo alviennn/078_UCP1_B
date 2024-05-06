@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDW KELAS B_2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carousel-container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .card img {
+            width: 50%;
+            height: 50%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgb(47, 65, 100);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 5%;
+        }
+
+        .next {
+            right: 5%;
+        }
+
+        .container {
+            margin-top: 70px; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="index.html">A DAY IN MY LIFE</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                Kesenangan<i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="music.html"> Foto</a>
+                <a href="foto.html"> Music</a>
+            </div>
+        </div>
+        <a href="favorite.html" id="nav-tugas" class="nav-link">
+            Favorite
+        </a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="text">
+                <h1>Namaku Alvien Ridho Nanda Pryastika</h1>
+                <p>Kegiatan ku sehari hari kuliah, main handphone, makan, main, tidur</p>
+                <div class="carousel-container">
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <div class="carousel">
+                        <div class="card">
+                            <img src="https://i.pinimg.com/236x/9f/df/18/9fdf1855410faf1e316ab4a79172f693.jpg" alt="Image 1">
+                        </div>
+                        <div class="card">
+                            <img src="https://i.pinimg.com/236x/fe/d6/f3/fed6f3e66e27c6dd0b1c3abeaaab46b2.jpg" alt="Image 2">
+                        </div>
+                        <div class="card">
+                            <img src="https://i.pinimg.com/236x/37/2b/7d/372b7d6054cb05c4bea7bd3d0bd66835.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>UCP PDW PRAKTIKUM KELAS B</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/alvienn__"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/yenn."><i class="fab fa-spotify"></i></a>
+                <a href="https://github.com/alviennn"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+
+        function showSlide() {
+            var slides = document.querySelectorAll('.card');
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            var transformValue = -100 * slideIndex + '%';
+            document.querySelector('.carousel').style.transform = 'translateX(' + transformValue + ')';
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide();
+        }
+
+        showSlide();
+    </script>
+
+</body>
+
+</html>
