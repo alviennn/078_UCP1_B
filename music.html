@@ -46,7 +46,7 @@
 
         body {
             height: 100vh;
-            background-color: #051115;
+            background-color: #424769;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -216,7 +216,11 @@
               <img src="https://i.pinimg.com/236x/bd/c4/ac/bdc4ac8f424c17b2091c42d55489e7d4.jpg">
             </div>
           </div>
+          <button onclick="showAlert()">
+            PENCET INI
+        </button>
     </section>
+    
 
     <footer class="footer">
         <div class="container-footer">
@@ -229,7 +233,6 @@
         </div>
     </footer>
     <script>
-        // JavaScript for real-time greetings and current time
         function updateGreetings() {
             var today = new Date();
             var currentHour = today.getHours();
@@ -253,7 +256,12 @@
 
         updateGreetings();
         setInterval(updateGreetings, 1000);
+
+        function showAlert() {
+        alert('Foto adalah cara untuk mengekspresikan emosi. Langit menandakan kebebasan dalam hidup, warnanya yang biru menandakan kedamaian.');
+        }
     </script>
+
 </body>
 
 </html>

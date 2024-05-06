@@ -128,6 +128,28 @@ section {
     margin-bottom: 20px;
 }
 
+button{
+    margin-top: 20px;
+}
+
+    @keyframes typing {
+        from {
+        width: 0;
+        }
+        to {
+        width: 100%;
+        }
+    }
+    
+    .text h1 {
+        overflow: hidden; /* Hindari teks yang keluar dari kotak */
+        white-space: nowrap; /* Hindari pemisahan kata */
+        animation: typing 7s steps(40, end) infinite; /* Animasi muncul satu persatu */
+        padding-right: 10px;
+        border-right: 1px solid orange; /* Efek imitasi kursor */
+        width: 0; /* Mulai dengan lebar 0 */
+    }
+
 .link1-audio,
 .link2-audio,
 .link3-audio,
