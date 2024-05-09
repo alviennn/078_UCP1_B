@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDW KELAS B_2024</title>
+    <title>UCPDW_078</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;1,900&family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Custom CSS for this page */
+        
         .greetings {
             font-size: 24px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
+
         header.navbar{
             top: 0;
         }
@@ -232,30 +237,35 @@
             </div>
         </div>
     </footer>
+    
     <script>
-        function updateGreetings() {
-            var today = new Date();
-            var currentHour = today.getHours();
-            var greetingsElement = document.getElementById('greetings');
-            var currentTimeElement = document.getElementById('current-time');
-            var greetings = '';
+    function updateGreetings() {
+        var today = new Date();
+        var currentHour = today.getHours();
+        var greetingsElement = document.getElementById('greetings');
+        var currentTimeElement = document.getElementById('current-time');
+        var greetings = '';
 
-            if (currentHour < 12) {
-                greetings = 'Hai Selamat Pagi! ☀️';
-            } else if (currentHour < 18) {
-                greetings = 'Hai Selamat Siang!🌤️';
-            } else if (currentHour < 20) {
-                greetings = 'Hai Selamat Sore!🌥️';
-            } else {
-                greetings = 'Hai Selamat Malam!🌑';
-            }
+    if (currentHour < 12) {
+        greetings = 'GOOD MORNING';
+        greetingsElement.classList.remove('orange-text', 'black-text');
+        greetingsElement.classList.add('yellow-text');
+    } else if (currentHour < 18) {
+        greetings = 'GOOD AFTERNOON';
+        greetingsElement.classList.remove('yellow-text', 'black-text');
+        greetingsElement.classList.add('orange-text');
+    } else {
+        greetings = 'GOOD EVENING';
+        greetingsElement.classList.remove('yellow-text', 'orange-text');
+        greetingsElement.classList.add('black-text');
+    } 
 
-            greetingsElement.innerText = greetings;
-            currentTimeElement.innerText = 'Waktu Sekarang: ' + today.toLocaleTimeString();
-        }
+    greetingsElement.innerText = greetings;
+    currentTimeElement.innerText = 'Its ' + today.toLocaleTimeString();
+}
 
-        updateGreetings();
-        setInterval(updateGreetings, 1000);
+updateGreetings();
+setInterval(updateGreetings, 1000);
 
         function showAlert() {
         alert('Foto adalah cara untuk mengekspresikan emosi. Langit menandakan kebebasan dalam hidup, warnanya yang biru menandakan kedamaian.');

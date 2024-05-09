@@ -3,7 +3,7 @@ body {
     color: #CFD8DC;
     text-align: left;
     background-color: #424769;
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .teks-nav {
@@ -13,7 +13,9 @@ body {
     margin-right: 700px;
     margin-left: 30px;
     padding: 15px;
+    font-family: "Racing Sans One", sans-serif;
     font-style: oblique;
+    font-weight: bold;
 }
 
 .navbar {
@@ -22,16 +24,17 @@ body {
     background-color: #2D3250;
     padding: 15px;
     display: flex;
+
     align-items: center;
 }
 
 .nav-link {
     display: block;
-    padding: 0 15px;
+    padding: 0 25px;
     color: #90A4AE;
     text-decoration: none;
     font-size: 19px;
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 .dropdown {
@@ -56,7 +59,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #b9928b;
+    background-color: rgb(204, 156, 147);
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,12 +145,12 @@ button{
     }
     
     .text h1 {
-        overflow: hidden; /* Hindari teks yang keluar dari kotak */
-        white-space: nowrap; /* Hindari pemisahan kata */
-        animation: typing 7s steps(40, end) infinite; /* Animasi muncul satu persatu */
+        overflow: hidden; 
+        white-space: nowrap; 
+        animation: typing 7s steps(40, end) infinite; 
         padding-right: 10px;
-        border-right: 1px solid orange; /* Efek imitasi kursor */
-        width: 0; /* Mulai dengan lebar 0 */
+        border-right: 1px solid orange; 
+        width: 0; 
     }
 
 .link1-audio,
@@ -158,12 +161,16 @@ button{
     flex: 1;
 }
 
-.gambar1,
-.gambar2,
-.gambar3 {
-    flex: 1;
-    margin: 0 10px;
-    box-sizing: border-box;
+.yellow-text {
+    color: yellow;
+}
+
+.orange-text {
+    color: rgb(255, 179, 0);
+}
+
+.black-text {
+    color: black;
 }
 
 .row-gambar {
@@ -173,15 +180,6 @@ button{
 
 .row-video {
     padding-top: 250px;
-}
-
-.gambar1 img,
-.gambar2 img,
-.gambar3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
 }
 
 h1 {
@@ -278,13 +276,6 @@ p {
 
     .row-gambar {
         flex-wrap: wrap; /* Mengizinkan gambar untuk melingkar saat ruang terbatas */
-    }
-
-    .gambar1,
-    .gambar2,
-    .gambar3 {
-        margin: 10px 0; /* Mengurangi margin untuk gambar */
-        width: 100%; /* Mengisi lebar untuk gambar */
     }
 
     h1 {

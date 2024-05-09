@@ -4,13 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDW KELAS B_2024</title>
+    <title>UCPDW_078</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;1,900&family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; 
+        }
+
+        .container {
+            margin-top: 120px; 
+        }
         .carousel-container {
             width: 100%;
             margin: auto;
@@ -60,7 +74,7 @@
         }
 
         .container {
-            margin-top: 70px; /* Adjust this value as needed */
+            margin-top: 70px;
         }
     </style>
 </head>
@@ -91,7 +105,6 @@
                 <h1>Namaku Alvien Ridho Nanda Pryastika</h1>
                 <p>Kegiatan ku sehari hari kuliah, main handphone, makan, main, tidur</p>
                 <div class="carousel-container">
-                    <button class="prev" onclick="prevSlide()">&#10094;</button>
                     <div class="carousel">
                         <div class="card">
                             <img src="https://i.pinimg.com/236x/9f/df/18/9fdf1855410faf1e316ab4a79172f693.jpg" alt="Image 1">
@@ -103,6 +116,7 @@
                             <img src="https://i.pinimg.com/236x/37/2b/7d/372b7d6054cb05c4bea7bd3d0bd66835.jpg" alt="Image 3">
                         </div>
                     </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
                     <button class="next" onclick="nextSlide()">&#10095;</button>
                 </div>
             </div>
